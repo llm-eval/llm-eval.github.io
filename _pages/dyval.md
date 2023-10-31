@@ -3,7 +3,7 @@ layout: page
 permalink: /dyval/
 title: DyVal
 description: DyVal
-nav: true
+nav: false
 nav_order: 6
 ---
 

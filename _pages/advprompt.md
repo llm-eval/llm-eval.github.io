@@ -3,7 +3,7 @@ layout: page
 permalink: /advprompt/
 title: Adversarial
 description: Adversarial prompts
-nav: true
+nav: false
 nav_order: 5
 ---
 
