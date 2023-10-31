@@ -9,6 +9,10 @@ nav_order: 6
 
 ## Leaderboard
 
+DyVal is a new dynamic evaluation protocol for LLMs. More information can be found at [DyVal: Graph-informed Dynamic Evaluation of Large Language Models](https://arxiv.org/abs/2309.17167).
+
+Please contact us if you want the results of your models shown in this leaderboard.
+
 [[All results](#all-results)]  [[View by complexities](#view-by-complexities)]
 
 ### All results

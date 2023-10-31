@@ -11,6 +11,8 @@ nav_order: 5
 
 PromptBench can evaluate the adversarial robustness of LLMs to prompts. More information can be found at [PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts](https://arxiv.org/abs/2306.04528).
 
+Please contact us if you want the results of your models shown in this leaderboard.
+
 
 [[All results](#all-results)] [[View by datasets](#view-by-datasets)]
 
