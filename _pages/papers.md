@@ -7,14 +7,14 @@ nav: true
 nav_order: 3
 ---
 
-<div align="center">
+<!-- <div align="center">
   <img src="https://github.com/MLGroupJLU/LLM-eval-survey/blob/main/imgs/logo-llmeval.png?raw=true" alt="LLM evaluation" width="500"><br>
   <strong>
     Original research on evaluation of LLMs conducted by Microsoft Research and other collaborated institutes. *(Updated at: 2023/10)*
   </strong><br>
   (Contact: <a href="https://jd92.wang/">Jindong Wang</a>, also see our projects on <a href="https://llm-enhance.github.io/">LLM enhancement</a>)
 </div>
-<br>
+<br> -->
 
 - [DyVal: graph-informed dynamic evaluation of large language models](#dyval-graph-informed-dynamic-evaluation-of-large-language-models)
 - [Meta Semantic Template for Evaluation of Large Language Models](#meta-semantic-template-for-evaluation-of-large-language-models)

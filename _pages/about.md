@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PromptBench
+title: LLM evaluation
 permalink: /
 subtitle: 
 
