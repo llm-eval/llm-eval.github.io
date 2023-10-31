@@ -31,5 +31,5 @@ subtitle:
 **PromptBench** is our unified library for evaluating and understanding large language models.
 
 <p align="center">
-<img src="../assets/img/promptbench.png" style="width: 70%;"/>
+<img src="../assets/img/framework.png" style="width: 60%;"/>
 </p>
