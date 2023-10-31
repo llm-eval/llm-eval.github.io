@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /dyval/
-title: DyVal
-description: DyVal
+title: Leaderboard for LLM dynamic evaluation
+description: 
 nav: false
 nav_order: 6
 ---

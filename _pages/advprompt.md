@@ -1,13 +1,11 @@
 ---
 layout: page
 permalink: /advprompt/
-title: Adversarial
-description: Adversarial prompts
+title: Leaderboard for LLM robustness
+description: 
 nav: false
 nav_order: 5
 ---
-
-## Leaderboard
 
 PromptBench can evaluate the adversarial robustness of LLMs to prompts. More information can be found at [PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts](https://arxiv.org/abs/2306.04528).
 
