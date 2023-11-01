@@ -41,6 +41,8 @@ layout: default
             {{ content }}
           </div>
 
+          {% include highlights.html %}
+
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
             <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
