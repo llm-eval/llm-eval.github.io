@@ -53,7 +53,7 @@ Please contact us if you want the results of your models shown in this leaderboa
 | Vicuna-13B v1.3 | 0.47       | -               | 37.02         | 42.77           | 17.47           | 21.69        | -            |
 | LLaMA2-13B Chat | 2.20       | -               | 17.18         | 28.78           | 9.42            | 27.38        | -            |
 |     ChatGPT     | 77.62      | 24.31           | 96.84         | 62.80           | 58.27           | 53.64        | 7.47         |
-|       GPT4      | 85.95      | 43.78           | 99.00         | 94.78           | 57.67           | 71.17        | 18.33        |1
+|       GPT4      | 85.95      | 43.78           | 99.00         | 94.78           | 57.67           | 71.17        | 18.33        |
 
 
 #### Complexity 4
