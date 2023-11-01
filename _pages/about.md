@@ -19,6 +19,8 @@ subtitle:
 # social: true  # includes social icons at the bottom of the page
 ---
 
+
+
 <div align="center">
   <img src="https://github.com/MLGroupJLU/LLM-eval-survey/blob/main/imgs/logo-llmeval.png?raw=true" alt="LLM evaluation" width="500"><br>
   <strong>
@@ -28,10 +30,40 @@ subtitle:
 </div>
 <br>
 
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <td align="center">
+      <a href="https://llm-eval.github.io/advprompt/">
+        < img src="/assets/img/button_leaderboard.pdf" alt="Image 1">
+      </a >
+    </td>
+    <td align="center">
+      <a href="https://llm-eval.github.io/papers/">
+        < img src="/assets/img/button_leaderboard.pdf" alt="Image 2">
+      </a >
+    </td>
+    <td align="center">
+      <a href="https://llm-eval.github.io/code/">
+        < img src="/assets/img/button_leaderboard.pdf" alt="Image 3">
+      </a >
+    </td>
+    <td align="center">
+      <a href="https://llm-eval.github.io">
+        < img src="/assets/img/button_leaderboard.pdf" alt="Image 4">
+      </a >
+    </td>
+  </tr>
+</table>
+
+
 [![Button with Background Image](../assets/img/framework.png)](https://llm-eval.github.io/code/)
 
 
 **PromptBench** is our unified library for evaluating and understanding large language models.
+
+
+
 
 <!-- <p align="center">
 <img src="../assets/img/framework.png" style="width: 60%;"/>
