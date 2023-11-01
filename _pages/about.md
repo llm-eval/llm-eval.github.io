@@ -59,13 +59,19 @@ subtitle:
 ---
 
 <p align="center">
-  <img alt="Light" src="../assets/img/button_leaderboard.png" width="24%">
+  <a href="/advprompt/index.html">
+    <img alt="Leaderboard" src="../assets/img/button_leaderboard.png" width="24%">
+  </a>
 <!-- &nbsp; &nbsp; &nbsp; &nbsp; -->
-  <img alt="Dark" src="../assets/img/button_paper.png" width="24%">
+  <a href="/papers/index.html">
+    <img alt="Papers" src="../assets/img/button_paper.png" width="24%">
+  </a>
 <!-- &nbsp; &nbsp; &nbsp; &nbsp;  -->
-  <img alt="Dark" src="../assets/img/button_code.png" width="24%">
+  <a href="/code/index.html">
+    <img alt="Code" src="../assets/img/button_code.png" width="24%">
+  </a>
 <!-- &nbsp; &nbsp; &nbsp; &nbsp; -->
-  <img alt="Dark" src="../assets/img/button_more.png" width="24%">
+  <img alt="More" src="../assets/img/button_more.png" width="24%">
 </p>
 
 
