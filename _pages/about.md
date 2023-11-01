@@ -56,6 +56,8 @@ subtitle:
   </tr>
 </table> -->
 
+---
+
 <p align="center">
   <img alt="Light" src="../assets/img/button_leaderboard.png" width="24%">
 <!-- &nbsp; &nbsp; &nbsp; &nbsp; -->
