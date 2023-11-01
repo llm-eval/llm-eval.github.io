@@ -30,38 +30,41 @@ subtitle:
 </div>
 <br>
 
-
+<!-- 
 <table style="border-collapse: collapse;">
   <tr>
     <td align="center">
       <a href="https://llm-eval.github.io/advprompt/">
-        < img src="/assets/img/button_leaderboard.pdf" alt="Image 1">
+        <src="../assets/img/dyval.jpg" alt="Image 1">
       </a >
     </td>
     <td align="center">
       <a href="https://llm-eval.github.io/papers/">
-        < img src="/assets/img/button_leaderboard.pdf" alt="Image 2">
+        <src="../assets/img/dyval.jpg" alt="Image 2">
       </a >
     </td>
     <td align="center">
       <a href="https://llm-eval.github.io/code/">
-        < img src="/assets/img/button_leaderboard.pdf" alt="Image 3">
+        <src="../assets/img/dyval.jpg" alt="Image 3">
       </a >
     </td>
     <td align="center">
       <a href="https://llm-eval.github.io">
-        < img src="/assets/img/button_leaderboard.pdf" alt="Image 4">
+        <src="../assets/img/dyval.jpg" alt="Image 4">
       </a >
     </td>
   </tr>
-</table>
+</table> -->
 
-
-[![Button with Background Image](../assets/img/framework.png)](https://llm-eval.github.io/code/)
-
-
-**PromptBench** is our unified library for evaluating and understanding large language models.
-
+<p align="center">
+  <img alt="Light" src="../assets/img/button_leaderboard.png" width="24%">
+<!-- &nbsp; &nbsp; &nbsp; &nbsp; -->
+  <img alt="Dark" src="../assets/img/button_paper.png" width="24%">
+<!-- &nbsp; &nbsp; &nbsp; &nbsp;  -->
+  <img alt="Dark" src="../assets/img/button_code.png" width="24%">
+<!-- &nbsp; &nbsp; &nbsp; &nbsp; -->
+  <img alt="Dark" src="../assets/img/button_more.png" width="24%">
+</p>
 
 
 
