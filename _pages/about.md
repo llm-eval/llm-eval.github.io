@@ -28,8 +28,11 @@ subtitle:
 </div>
 <br>
 
+[![Button with Background Image](../assets/img/framework.png)](https://llm-eval.github.io/code/)
+
+
 **PromptBench** is our unified library for evaluating and understanding large language models.
 
-<p align="center">
+<!-- <p align="center">
 <img src="../assets/img/framework.png" style="width: 60%;"/>
-</p>
+</p> -->
