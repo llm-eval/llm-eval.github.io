@@ -135,9 +135,8 @@ Do large language models (LLMs) genuinely understand the semantics of the langua
 </p>
 
 <p align="center">
-[<a href="./pdfs/llm-eval.pdf">Paper</a>]
+[<a href="https://arxiv.org/abs/2307.03109">Paper</a>]
 [<a href="https://github.com/MLGroupJLU/LLM-eval-survey">Github</a>]
-[<a href="https://arxiv.org/abs/2307.03109">arXiv</a>]
 </p>
 
 <details>
@@ -179,9 +178,9 @@ Large language models (LLMs) are gaining increasing popularity in both academia 
 </p>
 
 <p align="center">
-[<a href="./pdfs/promptbench.pdf">Paper</a>]
+
+[<a href="https://arxiv.org/abs/2306.04528">Paper</a>]
 [<a href="https://github.com/microsoft/promptbench">Github</a>]
-[<a href="https://arxiv.org/abs/2306.04528">arXiv</a>]
 [<a href="https://huggingface.co/spaces/March07/PromptBench">Demo</a>]
 [<a href="https://www.bilibili.com/video/BV17X4y1W74A/">Video</a>]
 [<a href="https://zhuanlan.zhihu.com/p/637219127">Blog</a>]
@@ -224,9 +223,8 @@ The increasing reliance on Large Language Models (LLMs) across academia and indu
 </p>
 
 <p align="center">
-[<a href="./pdfs/glue-x.pdf">Paper</a>]
+[<a href="https://arxiv.org/abs/2211.08073">Paper</a>]
 [<a href="https://github.com/YangLinyi/GLUE-X">Github</a>]
-[<a href="https://arxiv.org/abs/2211.08073">arXiv</a>]
 [<a href="https://gluexbenchmark.com/">Leaderboard</a>]
 [<a href="https://zhuanlan.zhihu.com/p/641488976">Blog</a>]
 </p>
@@ -268,7 +266,7 @@ Pre-trained language models (PLMs) are known to improve the generalization perfo
 </p>
 
 <p align="center">
-[<a href="./pdfs/pandalm.pdf">Paper</a>]
+[<a href="https://arxiv.org/abs/2306.05087">Paper</a>]
 [<a href="https://github.com/WeOpenML/PandaLM">Github</a>]
 [<a href="https://huggingface.co/WeOpenML/PandaLM-7B-v1">Model</a>]
 [<a href="https://zhuanlan.zhihu.com/p/626391857">Blog</a>]
@@ -316,8 +314,9 @@ Instruction tuning large language models (LLMs) remains a challenging task, owin
 </p>
 
 <p align="center">
-[<a href="./pdfs/chatgpt_robust.pdf">Paper</a>]
+[<a href="https://arxiv.org/abs/2302.12095">Paper</a>]
 [<a href="https://github.com/microsoft/robustlearn">Github</a>]
+[<a href="https://zhuanlan.zhihu.com/p/612391048">Blog</a>]
 </p>
 
 <details>
