@@ -1,8 +1,9 @@
-# Markdown for website
-
-| title | layout | nav_order | parent |
-| --- | --- | --- | --- |
-| Prompt engineering | default | 5 | Leaderboard |
+---
+title: Prompt Engineering benchmark
+layout: default
+nav_order: 4
+parent: Leaderboard
+---
 
 # Prompt engineering
 
@@ -27,4 +28,4 @@ Please contact us if you want the results of your models shown in this leaderboa
 | baseline | 47.15 | 7.2 | 92.19 | 25.2 |
 | least to most | 75.28 | 79.8 | 79.38 | 96.2 |
 
-*”This is very important to my career.” is used in emotion prompt*
+*"This is very important to my career." is used in emotion prompt*
