@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>promptbench.dyval.DAG.dag &mdash; promptbench 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=f6245a2f"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            promptbench
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dataload/index.html">promptbench.dataload</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">promptbench.dyval</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">promptbench</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">promptbench.dyval.DAG.dag</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/dyval/DAG/dag.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-promptbench.dyval.DAG.dag">
+<span id="promptbench-dyval-dag-dag"></span><h1>promptbench.dyval.DAG.dag<a class="headerlink" href="#module-promptbench.dyval.DAG.dag" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.BaseDAG">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.dyval.DAG.dag.</span></span><span class="sig-name descname"><span class="pre">BaseDAG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add_cycles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.BaseDAG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for Directed Acyclic Graph (DAG) structures.</p>
+<p>This class provides foundational functionality for DAG operations, including node management,
+topological sorting, and cycle detection.</p>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>symbols_set<span class="classifier">str</span></dt><dd><p>A string of alphabets used in generating unique node names.</p>
+</dd>
+<dt>forbidden_names<span class="classifier">set of str</span></dt><dd><p>A set of names that are not allowed for nodes.</p>
+</dd>
+<dt>name_generator<span class="classifier">generator</span></dt><dd><p>A generator for producing unique node names.</p>
+</dd>
+<dt>nodes<span class="classifier">list of Node</span></dt><dd><p>The list of nodes in the DAG.</p>
+</dd>
+<dt>add_cycles<span class="classifier">int</span></dt><dd><p>The number of cycles to add to the DAG.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>get_node_by_name(name)</dt><dd><p>Retrieves a node by its name.</p>
+</dd>
+<dt>topological_sort()</dt><dd><p>Performs topological sorting on the DAG nodes.</p>
+</dd>
+<dt>check_link_constraint(father_node, child_node)</dt><dd><p>Checks if a link between two nodes is valid.</p>
+</dd>
+<dt>generate_cycles()</dt><dd><p>Introduces cycles in the DAG.</p>
+</dd>
+<dt>_form_cycle(start, end)</dt><dd><p>Checks if adding a link forms a cycle.</p>
+</dd>
+<dt>_generate_name()</dt><dd><p>Generates a unique name for a node.</p>
+</dd>
+<dt>_get_reachable_nodes(start)</dt><dd><p>Finds all nodes reachable from a given starting node.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.BaseDAG.check_link_constraint">
+<span class="sig-name descname"><span class="pre">check_link_constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">father_node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.BaseDAG.check_link_constraint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.BaseDAG.generate_cycles">
+<span class="sig-name descname"><span class="pre">generate_cycles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.BaseDAG.generate_cycles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Introduce cycles in the DAG.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.BaseDAG.get_node_by_name">
+<span class="sig-name descname"><span class="pre">get_node_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.BaseDAG.get_node_by_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.BaseDAG.topological_sort">
+<span class="sig-name descname"><span class="pre">topological_sort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.BaseDAG.topological_sort" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.GeneralDAG">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.dyval.DAG.dag.</span></span><span class="sig-name descname"><span class="pre">GeneralDAG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_links_per_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_links_per_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_cycles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.GeneralDAG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#promptbench.dyval.DAG.dag.BaseDAG" title="promptbench.dyval.DAG.dag.BaseDAG"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDAG</span></code></a></p>
+<p>Represents a general Directed Acyclic Graph with customizable parameters.</p>
+<p>Inherits from BaseDAG and allows for specifying the number of nodes and the range of links per node.</p>
+<section id="parameters">
+<h2>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>num_nodes<span class="classifier">int</span></dt><dd><p>The number of nodes in the DAG.</p>
+</dd>
+<dt>min_links_per_node<span class="classifier">int</span></dt><dd><p>The minimum number of links each node can have.</p>
+</dd>
+<dt>max_links_per_node<span class="classifier">int</span></dt><dd><p>The maximum number of links each node can have.</p>
+</dd>
+<dt>add_cycles<span class="classifier">int, optional</span></dt><dd><p>The number of cycles to be added to the DAG (default is 0).</p>
+</dd>
+</dl>
+</section>
+<section id="id1">
+<h2>Methods:<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>generate_dag(num_nodes)</dt><dd><p>Generates the DAG with the specified number of nodes.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.GeneralDAG.generate_dag">
+<span class="sig-name descname"><span class="pre">generate_dag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.GeneralDAG.generate_dag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.Node">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.dyval.DAG.dag.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">op</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a node in a graph or a tree structure.</p>
+<section id="id2">
+<h2>Attributes:<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>value<span class="classifier">Any</span></dt><dd><p>The value stored in the node.</p>
+</dd>
+<dt>op<span class="classifier">Any, optional</span></dt><dd><p>The operation or function associated with the node.</p>
+</dd>
+<dt>name<span class="classifier">str, optional</span></dt><dd><p>The unique identifier of the node.</p>
+</dd>
+<dt>children<span class="classifier">list of Node, optional</span></dt><dd><p>The children nodes of this node.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.TreeDAG">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.dyval.DAG.dag.</span></span><span class="sig-name descname"><span class="pre">TreeDAG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_children_per_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_links_per_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_cycles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.TreeDAG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#promptbench.dyval.DAG.dag.BaseDAG" title="promptbench.dyval.DAG.dag.BaseDAG"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseDAG</span></code></a></p>
+<p>Represents a Directed Acyclic Graph built from a tree structure.</p>
+<p>This class extends BaseDAG and allows for the creation of a DAG from a tree, with additional
+properties like depth, number of children per node, and extra links per node.</p>
+<section id="id3">
+<h2>Parameters:<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>depth<span class="classifier">int</span></dt><dd><p>The depth of the tree to generate.</p>
+</dd>
+<dt>num_children_per_node<span class="classifier">int</span></dt><dd><p>The number of children each node can have.</p>
+</dd>
+<dt>extra_links_per_node<span class="classifier">int</span></dt><dd><p>The number of extra links per node.</p>
+</dd>
+<dt>add_cycles<span class="classifier">int, optional</span></dt><dd><p>The number of cycles to be added to the DAG (default is 0).</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h2>Methods:<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>generate_tree(depth)</dt><dd><p>Generates the tree structure.</p>
+</dd>
+<dt>update_values()</dt><dd><p>Updates the value of each node after adding links.</p>
+</dd>
+<dt>check_link_constraint(father_node, child_node)</dt><dd><p>Defines constraints for link addition between nodes.</p>
+</dd>
+<dt>check_uni_ops()</dt><dd><p>Checks if all nodes’ operations are unary.</p>
+</dd>
+<dt>generate_dag()</dt><dd><p>Generates the DAG based on the tree.</p>
+</dd>
+<dt>collect_nodes(node)</dt><dd><p>Collects all nodes from a given starting node.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.TreeDAG.check_link_constraint">
+<span class="sig-name descname"><span class="pre">check_link_constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">father_node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.TreeDAG.check_link_constraint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.TreeDAG.check_uni_ops">
+<span class="sig-name descname"><span class="pre">check_uni_ops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.TreeDAG.check_uni_ops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.TreeDAG.collect_nodes">
+<span class="sig-name descname"><span class="pre">collect_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.TreeDAG.collect_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.TreeDAG.generate_dag">
+<span class="sig-name descname"><span class="pre">generate_dag</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.TreeDAG.generate_dag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.TreeDAG.generate_tree">
+<span class="sig-name descname"><span class="pre">generate_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.TreeDAG.generate_tree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.dyval.DAG.dag.TreeDAG.update_values">
+<span class="sig-name descname"><span class="pre">update_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.DAG.dag.TreeDAG.update_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Kaijie Zhu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>promptbench.models.models &mdash; promptbench 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=f6245a2f"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="promptbench.utils" href="../utils/index.html" />
+    <link rel="prev" title="promptbench.models" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            promptbench
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dataload/index.html">promptbench.dataload</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dyval/index.html">promptbench.dyval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics/index.html">promptbench.metrics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">promptbench.models</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">promptbench.models.models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.models.models.LMMBaseModel"><code class="docutils literal notranslate"><span class="pre">LMMBaseModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#promptbench.models.models.LMMBaseModel.predict"><code class="docutils literal notranslate"><span class="pre">LMMBaseModel.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.models.models.LlamaModel"><code class="docutils literal notranslate"><span class="pre">LlamaModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#promptbench.models.models.LlamaModel.predict"><code class="docutils literal notranslate"><span class="pre">LlamaModel.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.models.models.OpenAIModel"><code class="docutils literal notranslate"><span class="pre">OpenAIModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#promptbench.models.models.OpenAIModel.predict"><code class="docutils literal notranslate"><span class="pre">OpenAIModel.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#promptbench.models.models.OpenAIModel.sleep"><code class="docutils literal notranslate"><span class="pre">OpenAIModel.sleep()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.models.models.PhiModel"><code class="docutils literal notranslate"><span class="pre">PhiModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#promptbench.models.models.PhiModel.predict"><code class="docutils literal notranslate"><span class="pre">PhiModel.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.models.models.T5Model"><code class="docutils literal notranslate"><span class="pre">T5Model</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.models.models.UL2Model"><code class="docutils literal notranslate"><span class="pre">UL2Model</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.models.models.VicunaModel"><code class="docutils literal notranslate"><span class="pre">VicunaModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#promptbench.models.models.VicunaModel.predict"><code class="docutils literal notranslate"><span class="pre">VicunaModel.predict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">promptbench.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">promptbench</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">promptbench.models</a></li>
+      <li class="breadcrumb-item active">promptbench.models.models</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/models/models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-promptbench.models.models">
+<span id="promptbench-models-models"></span><h1>promptbench.models.models<a class="headerlink" href="#module-promptbench.models.models" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.models.models.LMMBaseModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.models.models.</span></span><span class="sig-name descname"><span class="pre">LMMBaseModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_new_tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.LMMBaseModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Abstract base class for language model interfaces.</p>
+<p>This class provides a common interface for various language models and includes methods for prediction.</p>
+<section id="parameters">
+<h2>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>model<span class="classifier">str</span></dt><dd><p>The name of the language model.</p>
+</dd>
+<dt>max_new_tokens<span class="classifier">int</span></dt><dd><p>The maximum number of new tokens to be generated.</p>
+</dd>
+<dt>temperature<span class="classifier">float, optional</span></dt><dd><p>The temperature for text generation (default is 0).</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods:<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>predict(input_text, <a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs)</dt><dd><p>Generates a prediction based on the input text.</p>
+</dd>
+<dt>__call__(input_text, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</dt><dd><p>Shortcut for predict method.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.models.models.LMMBaseModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.LMMBaseModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.models.models.LlamaModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.models.models.</span></span><span class="sig-name descname"><span class="pre">LlamaModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_new_tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.LlamaModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#promptbench.models.models.LMMBaseModel" title="promptbench.models.models.LMMBaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">LMMBaseModel</span></code></a></p>
+<p>Language model class for the Llama model.</p>
+<p>Inherits from LMMBaseModel and sets up the Llama language model for use.</p>
+<section id="id5">
+<h2>Parameters:<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>model<span class="classifier">str</span></dt><dd><p>The name of the Llama model.</p>
+</dd>
+<dt>max_new_tokens<span class="classifier">int</span></dt><dd><p>The maximum number of new tokens to be generated.</p>
+</dd>
+<dt>temperature<span class="classifier">float, optional</span></dt><dd><p>The temperature for text generation (default is 0).</p>
+</dd>
+<dt>system_prompt<span class="classifier">str, optional</span></dt><dd><p>The system prompt to be used (default is None).</p>
+</dd>
+<dt>model_dir<span class="classifier">str, optional</span></dt><dd><p>The directory containing the model files (default is None).</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.models.models.LlamaModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.LlamaModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.models.models.OpenAIModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.models.models.</span></span><span class="sig-name descname"><span class="pre">OpenAIModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_new_tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">openai_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sleep_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.OpenAIModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#promptbench.models.models.LMMBaseModel" title="promptbench.models.models.LMMBaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">LMMBaseModel</span></code></a></p>
+<p>Language model class for interfacing with OpenAI’s GPT models.</p>
+<p>Inherits from LMMBaseModel and sets up a model interface for OpenAI GPT models.</p>
+<section id="id6">
+<h2>Parameters:<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>model<span class="classifier">str</span></dt><dd><p>The name of the OpenAI model.</p>
+</dd>
+<dt>max_new_tokens<span class="classifier">int</span></dt><dd><p>The maximum number of new tokens to be generated.</p>
+</dd>
+<dt>temperature<span class="classifier">float, optional</span></dt><dd><p>The temperature for text generation (default is 0).</p>
+</dd>
+<dt>system_prompt<span class="classifier">str, optional</span></dt><dd><p>The system prompt to be used (default is None).</p>
+</dd>
+<dt>openai_key<span class="classifier">str, optional</span></dt><dd><p>The OpenAI API key (default is None).</p>
+</dd>
+<dt>sleep_time<span class="classifier">int, optional</span></dt><dd><p>The sleep time between inference calls (default is 3).</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h2>Methods:<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>sleep(seconds)</dt><dd><p>Sleep for the specified number of seconds.</p>
+</dd>
+<dt>predict(input_text)</dt><dd><p>Predicts the output based on the given input text using the OpenAI model.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.models.models.OpenAIModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.OpenAIModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.models.models.OpenAIModel.sleep">
+<span class="sig-name descname"><span class="pre">sleep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seconds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.OpenAIModel.sleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.models.models.PhiModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.models.models.</span></span><span class="sig-name descname"><span class="pre">PhiModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_new_tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.PhiModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#promptbench.models.models.LMMBaseModel" title="promptbench.models.models.LMMBaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">LMMBaseModel</span></code></a></p>
+<p>Language model class for the Phi model.</p>
+<p>Inherits from LMMBaseModel and sets up the Phi language model for use.</p>
+<section id="id8">
+<h2>Parameters:<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>model<span class="classifier">str</span></dt><dd><p>The name of the Phi model.</p>
+</dd>
+<dt>max_new_tokens<span class="classifier">int</span></dt><dd><p>The maximum number of new tokens to be generated.</p>
+</dd>
+<dt>temperature<span class="classifier">float, optional</span></dt><dd><p>The temperature for text generation (default is 0).</p>
+</dd>
+<dt>system_prompt<span class="classifier">str, optional</span></dt><dd><p>The system prompt to be used (default is None).</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.models.models.PhiModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.PhiModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.models.models.T5Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.models.models.</span></span><span class="sig-name descname"><span class="pre">T5Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_new_tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.T5Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#promptbench.models.models.LMMBaseModel" title="promptbench.models.models.LMMBaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">LMMBaseModel</span></code></a></p>
+<p>Language model class for the T5 model.</p>
+<p>Inherits from LMMBaseModel and sets up the T5 language model for use.</p>
+<section id="id9">
+<h2>Parameters:<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>model<span class="classifier">str</span></dt><dd><p>The name of the T5 model.</p>
+</dd>
+<dt>max_new_tokens<span class="classifier">int</span></dt><dd><p>The maximum number of new tokens to be generated.</p>
+</dd>
+<dt>temperature<span class="classifier">float, optional</span></dt><dd><p>The temperature for text generation (default is 0).</p>
+</dd>
+<dt>system_prompt<span class="classifier">str, optional</span></dt><dd><p>The system prompt to be used (default is None).</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.models.models.UL2Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.models.models.</span></span><span class="sig-name descname"><span class="pre">UL2Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_new_tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.UL2Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#promptbench.models.models.LMMBaseModel" title="promptbench.models.models.LMMBaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">LMMBaseModel</span></code></a></p>
+<p>Language model class for the UL2 model.</p>
+<p>Inherits from LMMBaseModel and sets up the UL2 language model for use.</p>
+<section id="id10">
+<h2>Parameters:<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>model<span class="classifier">str</span></dt><dd><p>The name of the UL2 model.</p>
+</dd>
+<dt>max_new_tokens<span class="classifier">int</span></dt><dd><p>The maximum number of new tokens to be generated.</p>
+</dd>
+<dt>temperature<span class="classifier">float, optional</span></dt><dd><p>The temperature for text generation (default is 0).</p>
+</dd>
+<dt>system_prompt<span class="classifier">str, optional</span></dt><dd><p>The system prompt to be used (default is None).</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="promptbench.models.models.VicunaModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">promptbench.models.models.</span></span><span class="sig-name descname"><span class="pre">VicunaModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_new_tokens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.VicunaModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#promptbench.models.models.LMMBaseModel" title="promptbench.models.models.LMMBaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">LMMBaseModel</span></code></a></p>
+<p>Language model class for the Vicuna model.</p>
+<p>Inherits from LMMBaseModel and sets up the Vicuna language model for use.</p>
+<section id="id11">
+<h2>Parameters:<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>model<span class="classifier">str</span></dt><dd><p>The name of the Vicuna model.</p>
+</dd>
+<dt>max_new_tokens<span class="classifier">int</span></dt><dd><p>The maximum number of new tokens to be generated.</p>
+</dd>
+<dt>temperature<span class="classifier">float, optional</span></dt><dd><p>The temperature for text generation (default is 0).</p>
+</dd>
+<dt>system_prompt<span class="classifier">str, optional</span></dt><dd><p>The system prompt to be used (default is None).</p>
+</dd>
+<dt>model_dir<span class="classifier">str, optional</span></dt><dd><p>The directory containing the model files (default is None).</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="promptbench.models.models.VicunaModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.models.models.VicunaModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="promptbench.models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../utils/index.html" class="btn btn-neutral float-right" title="promptbench.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Kaijie Zhu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

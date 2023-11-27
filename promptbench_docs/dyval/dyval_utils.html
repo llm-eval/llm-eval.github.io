@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>promptbench.dyval.dyval_utils &mdash; promptbench 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=f6245a2f"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="promptbench.dyval.DAG" href="DAG/index.html" />
+    <link rel="prev" title="promptbench.dyval.dyval_dataset" href="dyval_dataset.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            promptbench
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dataload/index.html">promptbench.dataload</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">promptbench.dyval</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dyval_dataset.html">promptbench.dyval.dyval_dataset</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">promptbench.dyval.dyval_utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.dyval.dyval_utils.evaluate"><code class="docutils literal notranslate"><span class="pre">evaluate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.dyval.dyval_utils.process_dyval_inputs"><code class="docutils literal notranslate"><span class="pre">process_dyval_inputs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.dyval.dyval_utils.process_dyval_preds"><code class="docutils literal notranslate"><span class="pre">process_dyval_preds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.dyval.dyval_utils.process_dyval_training_sample"><code class="docutils literal notranslate"><span class="pre">process_dyval_training_sample()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#promptbench.dyval.dyval_utils.round_value"><code class="docutils literal notranslate"><span class="pre">round_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DAG/index.html">promptbench.dyval.DAG</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../metrics/index.html">promptbench.metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/index.html">promptbench.models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utils/index.html">promptbench.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">promptbench</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">promptbench.dyval</a></li>
+      <li class="breadcrumb-item active">promptbench.dyval.dyval_utils</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/dyval/dyval_utils.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-promptbench.dyval.dyval_utils">
+<span id="promptbench-dyval-dyval-utils"></span><h1>promptbench.dyval.dyval_utils<a class="headerlink" href="#module-promptbench.dyval.dyval_utils" title="Permalink to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="promptbench.dyval.dyval_utils.evaluate">
+<span class="sig-prename descclassname"><span class="pre">promptbench.dyval.dyval_utils.</span></span><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.dyval_utils.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates predictions against ground truths for different dataset types.</p>
+<section id="parameters">
+<h2>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>dataset_type<span class="classifier">str</span></dt><dd><p>The type of dataset (e.g., ‘arithmetic’, ‘max_sum_path’).</p>
+</dd>
+<dt>preds<span class="classifier">list</span></dt><dd><p>A list of predictions.</p>
+</dd>
+<dt>gts<span class="classifier">list</span></dt><dd><p>A list of ground truths.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns:<a class="headerlink" href="#returns" title="Permalink to this heading">¶</a></h2>
+<p>:
+float</p>
+<blockquote>
+<div><p>The accuracy of predictions as a proportion of correct answers.</p>
+</div></blockquote>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="promptbench.dyval.dyval_utils.process_dyval_inputs">
+<span class="sig-prename descclassname"><span class="pre">promptbench.dyval.dyval_utils.</span></span><span class="sig-name descname"><span class="pre">process_dyval_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.dyval_utils.process_dyval_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes inputs for dynamic value (DyVal) dataset.</p>
+<section id="id1">
+<h2>Parameters:<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>prompt<span class="classifier">str</span></dt><dd><p>The prompt template to be formatted.</p>
+</dd>
+<dt>dataset<span class="classifier">DyValDataset</span></dt><dd><p>The dataset containing descriptions and other relevant data.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h2>Returns:<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>:
+dict</p>
+<blockquote>
+<div><p>A dictionary of processed inputs organized by order.</p>
+</div></blockquote>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="promptbench.dyval.dyval_utils.process_dyval_preds">
+<span class="sig-prename descclassname"><span class="pre">promptbench.dyval.dyval_utils.</span></span><span class="sig-name descname"><span class="pre">process_dyval_preds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.dyval_utils.process_dyval_preds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the raw prediction string to extract the predicted value.</p>
+<section id="id3">
+<h2>Parameters:<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>raw_pred<span class="classifier">str</span></dt><dd><p>The raw prediction string.</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h2>Returns:<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>:
+str</p>
+<blockquote>
+<div><p>The extracted prediction.</p>
+</div></blockquote>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="promptbench.dyval.dyval_utils.process_dyval_training_sample">
+<span class="sig-prename descclassname"><span class="pre">promptbench.dyval.dyval_utils.</span></span><span class="sig-name descname"><span class="pre">process_dyval_training_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.dyval_utils.process_dyval_training_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes a single training sample for DyVal training dataset.</p>
+<section id="id5">
+<h2>Parameters:<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>sample<span class="classifier">dict</span></dt><dd><p>The sample to be processed.</p>
+</dd>
+<dt>dataset_type<span class="classifier">str</span></dt><dd><p>The type of dataset (e.g., ‘arithmetic’, ‘bool_logic’).</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h2>Returns:<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
+<p>:
+dict</p>
+<blockquote>
+<div><p>The processed sample.</p>
+</div></blockquote>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="promptbench.dyval.dyval_utils.round_value">
+<span class="sig-prename descclassname"><span class="pre">promptbench.dyval.dyval_utils.</span></span><span class="sig-name descname"><span class="pre">round_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#promptbench.dyval.dyval_utils.round_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rounds a numerical value to 8 decimal places.</p>
+<section id="id7">
+<h2>Parameters:<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>val<span class="classifier">float or str</span></dt><dd><p>The value to be rounded.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h2>Returns:<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
+<p>:
+str</p>
+<blockquote>
+<div><p>The rounded value as a string.</p>
+</div></blockquote>
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dyval_dataset.html" class="btn btn-neutral float-left" title="promptbench.dyval.dyval_dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DAG/index.html" class="btn btn-neutral float-right" title="promptbench.dyval.DAG" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Kaijie Zhu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
