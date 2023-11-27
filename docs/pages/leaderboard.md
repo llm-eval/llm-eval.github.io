@@ -13,4 +13,5 @@ We present several leaderboards in our research papers.
 <span class="fs-5">
 [Adversarial robustness](https://llm-eval.github.io/pages/leaderboard/advprompt.html){: .btn .btn-blue .mr-4 }
 [Dynamic evaluation](https:/llm-eval.github.io/pages/leaderboard/dyval.html){: .btn .btn-blue }
+[Prompt Engineering](https:/llm-eval.github.io/pages/leaderboard/pe.html){: .btn .btn-blue }
 </span>

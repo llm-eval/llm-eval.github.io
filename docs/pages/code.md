@@ -9,7 +9,7 @@ nav_order: 5
 
 **PromptBench** is our unified library for evaluating and understanding large language models.
 
-Please refer to [PromptBench](https://aka.ms/promptbench) for the code and [PromptBench docs](../../promptbench_docs/).
+Please refer to [PromptBench](https://aka.ms/promptbench) for the code and [PromptBench docs](../promptbench_docs/) for detailed documentation.
 
 <p align="center">
 <img src="../assets/img/promptbench.png" style="width: 70%;"/>

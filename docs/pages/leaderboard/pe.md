@@ -2,7 +2,7 @@
 
 | title | layout | nav_order | parent |
 | --- | --- | --- | --- |
-| Prompt engineering | default | 4 | Leaderboard |
+| Prompt engineering | default | 5 | Leaderboard |
 
 # Prompt engineering
 
