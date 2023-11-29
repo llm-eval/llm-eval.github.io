@@ -11,7 +11,7 @@ has_toc: false
 
 **PromptBench** is our unified library for evaluating and understanding large language models.
 
-Please refer to [PromptBench](https://aka.ms/promptbench) for the code.
+Please refer to [PromptBench](https://aka.ms/promptbench) for the code and [promptbench docs](https://promptbench.readthedocs.io/) for the detailed docs. 
 
 <p align="center">
 <img src="../assets/img/promptbench.png" style="width: 70%;"/>
