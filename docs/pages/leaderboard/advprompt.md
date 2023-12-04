@@ -32,7 +32,7 @@ Please contact us if you want the results of your models shown in this leaderboa
 
 ### All Results of Prompts
 
-|  Model  |   SST-2   |    CoLA   |    QQP    |    MPRC   |    MNLI   |    QNLI   |    RTE    |    WNLI   |    MMLU   |  SQuAD v2 |   IWSLT   |  UN Multi |    Math   |    Avg    |
+|  Prompt Type|   SST-2   |    CoLA   |    QQP    |    MPRC   |    MNLI   |    QNLI   |    RTE    |    WNLI   |    MMLU   |  SQuAD v2 |   IWSLT   |  UN Multi |    Math   |    Avg    |
 |:-------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ZS-task | 0.31±0.39 | 0.43±0.35 | 0.43±0.42 | 0.44±0.44 | 0.29±0.35 | 0.46±0.39 | 0.33±0.39 | 0.36±0.36 | 0.25±0.23 | 0.16±0.26 | 0.18±0.22 | 0.17±0.18 | 0.33±0.26 | 0.33±0.36 |
 | ZS-role | 0.28±0.35 | 0.43±0.38 | 0.34±0.43 | 0.51±0.43 | 0.26±0.33 | 0.51±0.40 | 0.35±0.40 | 0.39±0.39 | 0.22±0.26 | 0.20±0.28 | 0.24±0.25 | 0.15±0.16 | 0.39±0.30 | 0.34±0.37 |
