@@ -94,6 +94,8 @@ Do large language models (LLMs) genuinely understand the semantics of the langua
 - - -
 
 ## A survey on evaluation of large language models
+
+*Accepted by ACM Transactions on Intelligent Systems and Technology (TIST)!*
  
 <p align="center">
   Yupeng Chang<sup>*1</sup>,
