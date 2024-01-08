@@ -8,6 +8,7 @@ description: "Our research on LLM evaluation"
 # Papers 
 
 - [Papers](#papers)
+  - [PromptBench: a unified library for evaluation of large language models](#promptbench-a-unified-library-for-evaluation-of-large-language-models)
   - [DyVal: graph-informed dynamic evaluation of large language models](#dyval-graph-informed-dynamic-evaluation-of-large-language-models)
   - [Meta Semantic Template for Evaluation of Large Language Models](#meta-semantic-template-for-evaluation-of-large-language-models)
   - [A survey on evaluation of large language models](#a-survey-on-evaluation-of-large-language-models)
@@ -16,6 +17,43 @@ description: "Our research on LLM evaluation"
   - [PandaLM: An Automatic Evaluation Benchmark for LLM Instruction Tuning Optimization](#pandalm-an-automatic-evaluation-benchmark-for-llm-instruction-tuning-optimization)
   - [On the robustness of ChatGPT: an adversarial and OOD perspective](#on-the-robustness-of-chatgpt-an-adversarial-and-ood-perspective)
 
+
+- - -
+
+## PromptBench: a unified library for evaluation of large language models
+
+*Added on: 08/01/2024.* An extension to the former PromptBench.
+
+<p align="center">
+  Kaijie Zhu<sup>*1,2</sup>,
+  Qinlin Zhao<sup>*1,3</sup>,  
+  Hao Chen<sup>3</sup>,  
+  Jindong Wang<sup>#1</sup>, 
+  Xing Xie<sup>1</sup>
+</p>  
+
+<p align="center">
+<sup>1</sup> Microsoft Research Asia,
+<sup>2</sup> Institute of Automation, CAS,
+<sup>3</sup> University of Science and Technology of China,
+<sup>4</sup> Carnegie Mellon University<br>
+(*: Co-first authors, #: Corresponding author)
+</p>
+
+<p align="center">
+[<a href="https://arxiv.org/pdf/2312.07910.pdf">Paper</a>]
+[<a href="https://aka.ms/promptbench">Github</a>]
+</p>
+
+<details>
+<summary>Abstract</summary>
+The evaluation of large language models (LLMs) is crucial to assess their performance and mitigate potential security risks. In this paper, we introduce PromptBench, a unified library to evaluate LLMs. It consists of several key components that are easily used and extended by researchers: prompt construction, prompt engineering, dataset and model loading, adversarial prompt attack, dynamic evaluation protocols, and analysis tools. PromptBench is designed to be an open, general, and flexible codebase for research purposes that can facilitate original study in creating new benchmarks, deploying downstream applications, and designing new evaluation protocols. The code is available at: https://github.com/microsoft/promptbench and will be continuously supported.
+
+</details>
+
+<p align="center">
+<img src="https://files.catbox.moe/0kw21g.png" style="width: 70%;"/>
+</p>
 
 - - -
 
