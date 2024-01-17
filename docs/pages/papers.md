@@ -59,7 +59,7 @@ The evaluation of large language models (LLMs) is crucial to assess their perfor
 
 ## DyVal: graph-informed dynamic evaluation of large language models
 
-*Added on: 03/10/2023.*
+*This work is accepted by ICLR 2024 as spotlight!*
 
 <p align="center">
   Kaijie Zhu<sup>*1</sup>,
@@ -274,6 +274,8 @@ Pre-trained language models (PLMs) are known to improve the generalization perfo
 - - -
 
 ## PandaLM: An Automatic Evaluation Benchmark for LLM Instruction Tuning Optimization
+
+*This work is accepted by ICLR 2024!*
 
 <p align="center">
   Yidong Wang<sup>1,2*</sup>,
