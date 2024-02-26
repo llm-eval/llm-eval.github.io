@@ -8,6 +8,7 @@ description: "Our research on LLM evaluation"
 # Papers 
 
 - [Papers](#papers)
+  - [DyVal 2: Dynamic Evaluation of Large Language Models by Meta Probing Agents](#dyval-2-dynamic-evaluation-of-large-language-models-by-meta-probing-agents)
   - [PromptBench: a unified library for evaluation of large language models](#promptbench-a-unified-library-for-evaluation-of-large-language-models)
   - [DyVal: graph-informed dynamic evaluation of large language models](#dyval-graph-informed-dynamic-evaluation-of-large-language-models)
   - [Meta Semantic Template for Evaluation of Large Language Models](#meta-semantic-template-for-evaluation-of-large-language-models)
@@ -17,6 +18,41 @@ description: "Our research on LLM evaluation"
   - [PandaLM: An Automatic Evaluation Benchmark for LLM Instruction Tuning Optimization](#pandalm-an-automatic-evaluation-benchmark-for-llm-instruction-tuning-optimization)
   - [On the robustness of ChatGPT: an adversarial and OOD perspective](#on-the-robustness-of-chatgpt-an-adversarial-and-ood-perspective)
 
+- - -
+
+## DyVal 2: Dynamic Evaluation of Large Language Models by Meta Probing Agents
+
+*Added on: 26/01/2024.* An extension to the former DyVal.
+
+<p align="center">
+  Kaijie Zhu<sup>1,2</sup>,
+  Jindong Wang<sup>#1</sup>, 
+  Qinlin Zhao<sup>*3</sup>,  
+  Ruochen Xu<sup>1</sup>,  
+  Xing Xie<sup>1</sup>
+</p>  
+
+<p align="center">
+<sup>1</sup> Microsoft Research Asia,
+<sup>2</sup> Institute of Automation, CAS,
+<sup>3</sup> University of Science and Technology of China<br>
+(#: Corresponding author)
+</p>
+
+<p align="center">
+[<a href="https://arxiv.org/abs/2402.14865">Paper</a>]
+[<a href="https://aka.ms/promptbench">Github</a>]
+</p>
+
+<details>
+<summary>Abstract</summary>
+Evaluation of large language models (LLMs) has raised great concerns in the community due to the issue of data contamination. Existing work designed evaluation protocols using well-defined algorithms for specific tasks, which cannot be easily extended to diverse scenarios. Moreover, current evaluation benchmarks can only provide the overall benchmark results and cannot support a fine-grained and multifaceted analysis of LLMs' abilities. In this paper, we propose meta probing agents (MPA), a general dynamic evaluation protocol inspired by psychometrics to evaluate LLMs. MPA is the key component of DyVal 2, which naturally extends the previous DyVal~\citep{zhu2023dyval}. MPA designs the probing and judging agents to automatically transform an original evaluation problem into a new one following psychometric theory on three basic cognitive abilities: language understanding, problem solving, and domain knowledge. These basic abilities are also dynamically configurable, allowing multifaceted analysis. We conducted extensive evaluations using MPA and found that most LLMs achieve poorer performance, indicating room for improvement. Our multifaceted analysis demonstrated the strong correlation between the basic abilities and an implicit Matthew effect on model size, i.e., larger models possess stronger correlations of the abilities. MPA can also be used as a data augmentation approach to enhance LLMs.
+
+</details>
+
+<p align="center">
+<img src="/assets/img/dyval2.png" style="width: 70%;"/>
+</p>
 
 - - -
 
