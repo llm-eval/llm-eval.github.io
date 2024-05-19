@@ -22,7 +22,7 @@ description: "Our research on LLM evaluation"
 
 ## DyVal 2: Dynamic Evaluation of Large Language Models by Meta Probing Agents
 
-*Added on: 26/01/2024.* An extension to the former DyVal.
+*Added on: 26/01/2024.* ICML 2024. An extension to the former DyVal.
 
 <p align="center">
   Kaijie Zhu<sup>1,2</sup>,
@@ -58,7 +58,7 @@ Evaluation of large language models (LLMs) has raised great concerns in the comm
 
 ## PromptBench: a unified library for evaluation of large language models
 
-*Added on: 08/01/2024.* An extension to the former PromptBench.
+*Added on: 08/01/2024.* JMLR 2024. An extension to the former PromptBench.
 
 <p align="center">
   Kaijie Zhu<sup>*1,2</sup>,
